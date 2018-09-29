@@ -39,7 +39,7 @@ function getOne(req, res, next) {
         message: 'Item not found.'
       })
       res.status(200).send({
-        video: item
+        beta_tester: item
       })
     })
     .catch(next)
@@ -49,7 +49,7 @@ function create(req, res, next) {
   knex('beta_testers')
     .insert(req.body)
     .then(() => res.status(201).json({
-      video: req.body
+      beta_tester: req.body
     }))
     .catch(next)
 }
@@ -62,7 +62,7 @@ function update(req, res, next) {
     .update(req.body)
     .then(count => count >= 1 ?
       res.status(200).json({
-        video: req.body
+        beta_tester: req.body
       }) :
       res.status(410).json())
     .catch(next)

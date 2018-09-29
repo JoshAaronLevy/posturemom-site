@@ -9,7 +9,7 @@ const beta_testers = require('./routes');
 app.use(bodyParser.json());
 app.use(cors());
 
-app.use('/api/v2/beta_testers', beta_testers);
+app.use('/beta_testers', beta_testers);
 
 app.use((req, res, next) => {
   const err = new Error('Not Found');
