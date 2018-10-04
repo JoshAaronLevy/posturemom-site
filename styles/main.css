@@ -324,6 +324,22 @@ Section
     align-items: center;
 }
 
+.demo-btn {
+    border: none !important;
+}
+
+.demo-btn:hover {
+    border: none !important;
+}
+
+.demo-btn:focus {
+    border: none !important;
+}
+
+.demo-btn:active {
+    border: none !important;
+}
+
 /*------------------------------------
 Movie Result
 ------------------------------------*/
