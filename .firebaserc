@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "posturemom-site"
+    "default": "posturemom-site",
+    "production": "posturemom-site"
   }
 }

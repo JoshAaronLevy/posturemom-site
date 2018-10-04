@@ -33,11 +33,11 @@
           <a href="./index.html">Home</a>
         </li>
         <li>
-          <a href="#FindMovie">Find Movie</a>
+          <a href="#DemoVideo">Watch Demo</a>
         </li>
-        <li>
+        <!-- <li>
           <a href="#about" data-toggle="modal" data-target=".about-bmn-modal">About BMN</a>
-        </li>
+        </li> -->
       </ul>
       <a href="https://github.com/JoshAaronLevy/posturemom-app" target="_blank" class="github-corner" aria-label="View source on Github">
         <svg viewBox="0 0 250 250" aria-hidden="true">
@@ -60,184 +60,13 @@
       </div>
     </section>
   </section>
-  <section class="container">
-    <form id="MovieForm">
-      <h1 class="center mt-30 mb-50">Find Movie</h1>
-      <div class="form-group row">
-        <label for="actor" class="col-sm-2 col-form-label">Actor</label>
-        <div class="col-sm-6">
-          <select class="form-control" name="actor" id="actor">
-            <option value="select">Select a Bad Actor</option>
-            <option value="JCVD">Jean-Claude Van Damme</option>
-            <option value="ChuckNorris">Chuck Norris</option>
-          </select>
-        </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-sm-10">
-          <button class="btn btn-primary btn-lg save" onclick="findMovie()">Find Movie</button>
-        </div>
-      </div>
-      <div class="form-group row">
-        <div class="col-sm-10">
-          <button class="btn btn-primary btn-lg save" onclick="findBeer()">Find Beer</button>
-        </div>
-      </div>
-    </form>
+  <section class="container video-container">
+    <h1 class="text-center mb-30">Watch PostureMom Demo</h1>
+    <div id="DemoVideo">
+      <iframe width="1120" height="640" src="https://www.youtube.com/embed/M1_SJuy5KPI?rel=0" frameborder="0" allow="autoplay; encrypted-media"
+        allowfullscreen></iframe>
+    </div>
   </section>
-  <div class="modal fade chuck-norris-modal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header center">
-          <h3 class="modal-title">Warning!</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="about-modal">
-          <div class="col-lg-12">
-            <p class="snippet">While we admire your bravery, we are too afraid of the ramifications Chuck Norris would
-              bestow upon us if we
-              were to let you proceed. Please choose another actor from the list.</p>
-          </div>
-        </div>
-        <div class="modal-close">
-          <button class="btn btn-danger mb-10 mt-10 inline close" data-dismiss="modal">I Understand</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade invalid-actor-modal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header center">
-          <h3 class="modal-title">Error!</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="about-modal">
-          <div class="col-lg-12">
-            <p class="snippet">Please choose a bad actor from the list and try again.</p>
-          </div>
-        </div>
-        <div class="modal-close">
-          <button class="btn btn-danger mb-10 mt-10 inline close" data-dismiss="modal">Sure Thing</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade loading-modal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header center">
-          <h3 class="modal-title">Good Choice!</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="about-modal">
-          <div class="col-lg-12">
-            <div id="movie" class="movie-result container">
-            </div>
-          </div>
-        </div>
-        <div class="modal-close">
-          <button class="btn btn-danger mb-10 mt-10 inline close" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade jcvd-beer" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header center">
-          <h3 class="modal-title">Good Choice!</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="about-modal">
-          <div class="col-lg-12">
-            <div id="beer" class="movie-result container">
-            </div>
-          </div>
-        </div>
-        <div class="modal-close">
-          <button class="btn btn-danger mb-10 mt-10 inline close" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade chuck-norris-beer" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header center">
-          <h3 class="modal-title">Good Choice!</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="about-modal">
-          <div class="col-lg-12">
-            <div id="cnbeer" class="movie-result container">
-            </div>
-          </div>
-        </div>
-        <div class="modal-close">
-          <button class="btn btn-danger mb-10 mt-10 inline close" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade invalid-actor-beer" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header center">
-          <h3 class="modal-title">Uh Oh!</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="about-modal">
-          <div class="col-lg-12">
-            <p class="snippet">Please choose a bad actor from the list and try again.</p>
-          </div>
-        </div>
-        <div class="modal-close">
-          <button class="btn btn-danger mb-10 mt-10 inline close" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="modal fade about-bmn-modal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-      <div class="modal-content">
-        <div class="modal-header center">
-          <h3 class="modal-title">About PostureMom</h3>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="about-modal">
-          <div class="col-lg-12">
-            <p class="snippet">For over 5 years, my brother and I have had a monthly tradition: order some take-out,
-              pick up some beers, and
-              watch a bad movie. And with this tradition, the worse the movie, the better our movie night. It was a way
-              to
-              kick back and unwind.</p>
-            <p>But finding the best bad movie isn't easy. So I decided to make PostureMom.</p>
-            <p>With BMN, all you need to do is fill out the form to help you find the bad movie you love, and it'll
-              search the
-              bad movie database and find you the perfect movie to unwind with your loved one.</p>
-          </div>
-        </div>
-        <div class="modal-close">
-          <button class="btn btn-danger mb-10 mt-10 inline close" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
   <footer class="footer">
     <p class="footer-copy">
       Copyright &copy; 2018 - All Rights Reserved - Josh Levy
